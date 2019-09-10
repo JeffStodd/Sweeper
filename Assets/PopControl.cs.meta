@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 2b236afd6717d1c4fb0aca6521cf40de
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - prefab: {fileID: 1968112210217526, guid: 05823238989294c4d80d0e39ea590290, type: 2}
+  - spawn: {fileID: 4269781578323126, guid: d49aaf82896e9dc43979ef56297f627b, type: 2}
+  - generationCount: {instanceID: 0}
+  - time: {instanceID: 0}
+  - timeScaleDisplay: {instanceID: 0}
+  - avgFitness: {instanceID: 0}
+  - timeSlider: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
