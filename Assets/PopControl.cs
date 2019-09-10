@@ -9,8 +9,8 @@ public class PopControl : MonoBehaviour {
 
     List<AI> population = new List<AI>();
 
-    public int populationSize = 100;
-    public float percentSurvivors = 0.50f;
+    private int populationSize = 100;
+    public float percentSurvivors = 0.80f;
     public int generation = 0;
 
     public Transform spawn;
@@ -30,7 +30,7 @@ public class PopControl : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        Time.timeScale = 10f;
+        Time.timeScale = 5f;
         //Debug.Log("test");
         InitPopulation();
 	}
@@ -47,14 +47,15 @@ public class PopControl : MonoBehaviour {
         //Debug.Log(generation);
 
         //avgFitness.text = "Average Fitness: " + fitness;
-
+        
         if (!computing())
         {
             NextGeneration();
             generation++;
             //generationCount.text = "Generation: " + generation;
-            //Debug.Log("gen" + generation);
+            Debug.Log("gen" + generation);
         }
+        
 	}
 
     public void InitPopulation()

@@ -52,7 +52,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1968112210217526, guid: 05823238989294c4d80d0e39ea590290, type: 2}
-  populationSize: 100
   percentSurvivors: 0.5
   generation: 0
   spawn: {fileID: 4269781578323126}

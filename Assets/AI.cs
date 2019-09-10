@@ -11,7 +11,7 @@ public class AI : MonoBehaviour {
 
     private int currentIteration;
     public static int maxIterations = 1000;
-    private static float secondsPerIteration = 0.1f;
+    private static float secondsPerIteration = 0.5f;
 
     public Rigidbody2D rb;
 
@@ -62,14 +62,16 @@ public class AI : MonoBehaviour {
             float x = dna.forceVectors[currentIteration].x;
             float y = dna.forceVectors[currentIteration].y;
 
-            if (x != 0 && y != 0)
+            if (x != 0 || y != 0)
                 energySpent += Mathf.Sqrt(Mathf.Pow(x, 2) + Mathf.Pow(y, 2)) / 50;
 
             //Debug.Log(x + ", " + y);
             rb.AddForce(new Vector2(x, y));
 
             yield return new WaitForSeconds(secondsPerIteration);
-            
+
+            rb.velocity = new Vector2(0, 0);
+
             currentIteration++;
             //Debug.Log(currentIteration);
         }
